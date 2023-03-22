@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidades</title>
+    <style>
+        body{
+            background-color: darkgreen;
+        }       
+    </style>
+</head>
+<body>
+    <h1><strong>Você é do Brasil?</strong></h1>
+    Insira seu país: <input type="text" name="nactxt" id="nactxt">
+    <input type="button" value="Checar" onclick="verificar()">
+    <div id="res"></div>
+
+    <script>  
+    function verificar(){
+        var txtn = document.querySelector('input#nactxt')
+        var res = document.querySelector('div#res')
+        var nac = txtn.value
+        res.innerHTML = `<p>Seu país de origem é <strong>${nac}</strong></p>`
+        if (nac == "Brasil" || nac == "brasil") {
+          res.innerHTML += `<p>Você é Brasileiro`
+        } else {
+          res.innerHTML += `<p>Você é Estrangeiro`
+        }
+      }
+    </script>    
+</body>
+</html>
